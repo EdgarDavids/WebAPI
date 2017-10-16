@@ -1,0 +1,48 @@
+
+Task 1 Run Client Server Single Machine
+Run a Client-Server System on Single Machine
+Overview
+
+In this lab, you will run a web server and a web client on a single computer and use the client to call the server. While a very basic scenario, this allows you to understand or regain familiarity with how the client-server system works. Plus, it helps you learn how to use .Net Core to create server and client app.
+Configuration
+
+Get the starter files for this task from the GitHub repo, https://github.com/MicrosoftLearning/edX_DEV247X_Build_WebAPIs_Using_ASP.NET.git. It is recommended that you clone the entire repo to your computer for easier access to the required files in an offline scenario.
+
+Create a folder on your computer as a working directory. Give it a name of your choosing but we suggest starting with a WebAPI folder name. Then create a subfolder or directory for Module1.
+
+For this task, locate the Run a Client-Server System on a Single Machine folder. Copy the WebServer and WebClient directories and their entire contents to your Module1 working directory.
+Start the Web Server
+
+Run the command line (on Windows) or Terminal (on MacOS/Linux), enter the WebServer directory. Execute the commands below, pressing ENTER after each command line:
+
+dotnet restore
+dotnet build
+dotnet run
+
+If you see the output below, the server is started:
+
+Now listening on: http://localhost:5000
+Application started. Press Ctrl+C to shut down.
+
+Start the Web Client
+
+Open a new console or command window. Enter the WebClient directory, execute the commands below:
+
+dotnet restore
+dotnet build
+dotnet run http://localhost:5000
+
+If you see the output below, the client is started:
+
+Acceptable input: integer | ALL | EXIT
+
+Interaction of Client-Server
+
+In the WebClient command line window, try the listed input options below:
+
+    Enter an integer between 0 and 3: you will get the data of the rocket that has this ID
+    Enter an integer not in the range of 0 to 3: you will see "Nothing to print."
+    Enter ALL (case insensitive): you get the data list of all rockets
+    Enter EXIT (case insensitive): the client says "Thank You!" then stops.
+
+You can now go back to the console for the server and press CTRL + C to stop the server.
