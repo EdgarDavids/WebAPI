@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script>
+            var products=[
+                    {ID:101,Name:"Product - 101",Price:1.0},
+                    {ID:102,Name:"Product - 102",Price:2.0},
+                    {ID:103,Name:"Product - 103",Price:3.0}
+                ]
+            var json=JSON.stringify(products);
+            document.writeln(json);
+
+            var objects=JSON.parse(json);
+
+            for(var i in objects){
+                document.writeln("ID="+objects[i].ID+"; Name="+objects[i].Name +"; Price="+objects[i].Price);
+            }
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>
